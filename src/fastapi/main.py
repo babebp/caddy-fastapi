@@ -1,6 +1,10 @@
-from typing import Optional
+from typing import List, Optional
 
-from fastapi import FastAPI
+import os
+from pydantic import BaseModel, Field
+from graph_client import graph_client
+
+from fastapi import FastAPI, Request, Response, BackgroundTasks, HTTPException
 
 app = FastAPI()
 
@@ -13,16 +17,6 @@ def read_root():
 def read_root():
     return "OK"
 
-
-import os
-import uvicorn
-from fastapi import FastAPI, Request, Response, BackgroundTasks, HTTPException
-from pydantic import BaseModel, Field
-from typing import List, Optional
-
-from graph_client import graph_client
-
-app = FastAPI()
 
 
 # --- Pydantic Models for Webhook ---

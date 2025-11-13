@@ -5,6 +5,8 @@ WORKDIR /app
 # Install curl for healthchecks
 RUN apk add curl
 
+RUN apk add --no-cache ca-certificates
+
 # Setup a nonroot user for security
 RUN adduser -D nonroot
 USER nonroot

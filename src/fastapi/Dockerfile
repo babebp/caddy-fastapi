@@ -17,9 +17,7 @@ COPY requirements.txt .
 RUN pip install --user --no-cache-dir --upgrade -r requirements.txt
 
 # Copy the app
-COPY main.py /app/main.py
-COPY graph_client.py /app/graph_client.py
-COPY __init__.py /app/__int__.py
+COPY . /app/
 
 # Expose the app's port
 EXPOSE 8000

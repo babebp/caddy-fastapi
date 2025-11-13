@@ -5,3 +5,4 @@ creds.env
 # container volume files
 data/*
 !data/.gitkeep
+.env

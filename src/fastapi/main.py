@@ -20,7 +20,7 @@ from fastapi import FastAPI, Request, Response, BackgroundTasks, HTTPException
 from pydantic import BaseModel, Field
 from typing import List, Optional
 
-from .graph_client import graph_client
+from graph_client import graph_client
 
 app = FastAPI()
 
